@@ -1,5 +1,5 @@
 <html>
-	<p>Hello World Local</p>
+	<p>Hello World EC2</p>
 
 
 

@@ -1,0 +1,19 @@
+#left_nav_item
+{
+	min-width: 50%;
+	
+}
+
+#ts-nav-container
+{
+	height: 65px;
+}
+
+.nav-text
+{
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    font-style: inherit;
+}

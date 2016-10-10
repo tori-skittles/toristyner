@@ -11,7 +11,22 @@ angular.module('SiteApp',['ngRoute', 'ngMaterial', ])
     controller: 'MainController',
     controllerAs: 'vm'
   })
+  .when('/about', {
+    templateUrl: 'about/about.html',
+    controller: 'AboutController',
+    controllerAs: 'vm'
+  })
+  .when('/contact', {
+    templateUrl: 'contact/contact.html',
+    controller: 'ContactController',
+    controllerAs: 'vm'
+  })
 
+})
+.run(function($rootScope, $location) {
+    $rootScope.$on( "$routeChangeStart", function(event, next, current) {
+
+    });
 })
 
 })(window.angular);

@@ -20,12 +20,13 @@
 	<!-- Angular Controllers -->
 	<script src="script.js"></script>
 	<script src="main/main.controller.js"></script>
-	<script src="about/about.controller.js"></script>
-	<script src="contact/contact.controller.js"></script>
+	<script src="directives/windowResize.js"></script>
+	<!--<script src="about/about.controller.js"></script>
+	<script src="contact/contact.controller.js"></script>-->
 
 	<body ng-app="SiteApp">
 
-		<div controller="MainController as mv" layout="column" style="width: 100%;">
+		<div controller="MainController" layout="column" style="width: 100%;">
 			<md-content id="ts-nav-container" layout="row" class="md-padding" style="width: 100%;">
 				<div layout="row" layout="start center" style="width: 40%;" class="nav-text">
 					<div style='padding-top: 10px;'>Tori Styner</div>
@@ -36,7 +37,8 @@
     				</md-nav-bar>
    			</md-content> 
 
-			<div ng-view class='md-padding' layout="column" style="width: 100%">
+			<!-- <div id="main_content" resizeable ng-style="{width: windowWidth , height: windowHeight }" ng-view class='md-padding' layout="column"> -->
+			<div id="main_content" resizeable style="width: {{windowWidth}};  height: {{windowHeight}};" ng-view class='md-padding' layout="column">
 				
 									
 				

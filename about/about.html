@@ -1,5 +1,44 @@
-<div layout='row' layout-align='space-between center'>
+<div layout='column' layout-align="none center" class="resume">	
 
+	<div class="resume_container">
+	
+		<!-- OBJECTIVE -->
+		<div class="resume_section_header" layout="row" layout-align="start center">
+			<div>OBJECTIVE</div>
+		</div>
+		<!-- OBJECTIVE TEXT -->
+		<div class="objective">{{vm.resume.objective}}</div>
+		
+		<!-- EXPERIENCE -->
+		<div class="resume_section_header">EXPERIENCE</div>
+		<div ng-repeat="experience in vm.resume.experiences" layout="column" class="experience" style="height: {{ experience.details.length * 20 + 70}}px">
+			<div layout="row" layout-align="space-between center" class="job_header">
+				<div layout="row" layout-align="start center">
+					<div class="job">{{ experience.job }}</div>
+					<div class="job_location">{{ experience.job_location }}</div>
+				</div>
+				
+				<div class="duration" layout="row" layout-align="end center">
+					<div>{{ experience.duration }}</div>
+				</div>
+			</div>
+			<div class="job_title">{{ experience.job_title }}</div>
+			<div ng-repeat="detail in experience.details" class="detail">{{ detail }}</div>
+		</div>
 
+		<!-- EDUCATION -->
+		<div class="resume_section_header">EDUCATION</div>
+		<div ng-repeat="e in vm.resume.education" layout="column" class="education">
+			<div class="degree">{{ e.degree }}</div>
+			<div class="minor">{{ e.minor }}</div>
+			<div layout="row" layout-align="space-between center">
+				<div class="institution">{{ e.institution }}</div>
+				<div>{{ e.year }}</div>
+			</div>
+		</div>
 
+		<!-- SKILLS -->
+		<div class="resume_section_header">SKILLS</div>
+		<div class="skills">{{vm.resume.skills}}</div>
+	</div>
 </div>
